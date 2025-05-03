@@ -1,6 +1,6 @@
 
 new_document={
-    
+
     "account_holder": "John Doe",
     "account_id": "123456789",
     "account_type": "savings",
@@ -18,3 +18,16 @@ new_document={
         "TROO9090",
     ],
 }
+
+{
+    "account_holder": "JBM Bhai",
+    "account_id": "129956989",
+    "account_type": "checking",
+    "balance": 18000,
+},
+{
+    "account_holder": "Harshit Bhai",
+    "account_id": "92356789",
+    "account_type": "savings",
+    "balance": 90000,
+},

@@ -13,17 +13,24 @@ db=client.bank
 accounts_collection = db.accounts
 
 new_accounts=[{
-    "account_holder": "Ajay Bhai",
-    "account_id": "129456989",
+    "account_holder": "Ankit Bhai",
+    "account_id": "111956989",
     "account_type": "checking",
-    "balance": 179797.50,
+    "balance": 100,
+    "transfers_completed": [
+        "TROO901890",
+    ],
 },
 {
-    "account_holder": "Harsh Bhai",
-    "account_id": "12356789",
+    "account_holder": "Kalput Bhai",
+    "account_id": "992356789",
     "account_type": "savings",
-    "balance": 89000.50,
+    "balance": 60000,
+    "transfers_completed": [
+        "TROO67022",
+    ],
 },
+
 ]
 
 #Insert Many method

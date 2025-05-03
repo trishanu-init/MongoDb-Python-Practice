@@ -4,7 +4,6 @@ import datetime
 from dotenv import load_dotenv
 from pymongo import MongoClient
 
-from bson.objectid import ObjectId
 
 load_dotenv()
 MoONGODB_URI = os.environ["MONGODB_URI"]
@@ -15,11 +14,17 @@ db=client.bank
 
 accounts_collection = db.accounts
 
-document_to_find={"_id":ObjectId("681614df6b317cdbbe556feb")}
+document_to_find= {"balance": {"$gt": 10}}
 
-#Find one method
-result=accounts_collection.find_one(document_to_find)
+#Find multiple method
+cursor=accounts_collection.find(document_to_find)
 
-pprint.pprint(result)
+num_docs=0
+for i in cursor:
+    num_docs+=1
+    pprint.pprint(i)
+    print()
+
+print("# of documents found: ", str(num_docs))
 
 client.close()
